@@ -42,7 +42,7 @@ html {
             padding: 0;
             padding-right: 3rem; }
             html body nav div .main_list ul li a {
-              font: 14px "Lato", sans-serif;
+              font: 15px "Lato", sans-serif;
               color: #cd903c;
               text-transform: uppercase; }
             html body nav div .main_list ul li a:hover {
@@ -461,7 +461,7 @@ html {
       html body footer section div .subscribeForm .innerInput .subscribeBtn {
         max-width: 400px;
         height: 45px;
-        font: 14px "Lato", sans-serif;
+        font: 15px "Lato", sans-serif;
         letter-spacing: 1px;
         background-color: #cd903c;
         border: 1px solid #cd903c;
