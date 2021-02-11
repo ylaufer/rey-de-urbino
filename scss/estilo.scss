@@ -1,0 +1,924 @@
+@import "colores";
+@import "fonts";
+
+
+html {
+    box-sizing: border-box;
+    
+    body {
+        margin: 0 auto;
+        padding: 0;
+        background-color: $background;
+        animation: fadeInAnimation ease 2s; 
+                animation-iteration-count: 1; 
+                animation-fill-mode: forwards; 
+        
+        nav {
+            width: 100%;
+            height: 65px;
+            position: fixed;
+            line-height: 65px;
+            text-align: center;
+            z-index: 100;
+            div {
+                .logo {
+                    float: left;
+                    width: auto;
+                    height: auto;
+                    padding-left: 3rem;
+                    a {
+                        font-family: $logo;
+                        text-decoration: none;
+                        color: $dorado;
+                        font-size: 2.5rem;
+                    }
+                    a:hover {
+                        color: $blanco;
+                    }
+                }
+                .main_list {
+                    height: 65px;
+                    float: right;
+                    ul { 
+                        width: 100%;
+                        height: 65px;
+                        display: flex;
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+                        li {
+                            width: auto;
+                            height: 65px;
+                            padding: 0;
+                            padding-right: 3rem;
+                            a {
+                                font: $navbar;
+                                color: $dorado;
+                                text-transform: uppercase;
+                            }
+                            a:hover {
+                                color: white;
+                            }    
+                        }
+                    }
+                }
+                .navTrigger {
+                    display: none;
+                    cursor: pointer;
+                    width: 30px;
+                    height: 25px;
+                    margin: auto;
+                    position: absolute;
+                    right: 30px;
+                    top: 0;
+                    bottom: 0;
+
+                    i {
+                        background-color:$dorado;
+                        border-radius: 2px;
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 4px;
+                    }
+                    i:nth-child(1) {
+                            -webkit-animation: outT 0.8s backwards;
+                            animation: outT 0.8s backwards;
+                            -webkit-animation-direction: reverse;
+                            animation-direction: reverse;
+                        }
+                        
+                    i:nth-child(2) {
+                            margin: 5px 0;
+                            -webkit-animation: outM 0.8s backwards;
+                            animation: outM 0.8s backwards;
+                            -webkit-animation-direction: reverse;
+                            animation-direction: reverse;
+                        }
+                        
+                    i:nth-child(3) {
+                            -webkit-animation: outBtm 0.8s backwards;
+                            animation: outBtm 0.8s backwards;
+                            -webkit-animation-direction: reverse;
+                            animation-direction: reverse;
+                        }
+                    }
+                    .navTrigger.active i:nth-child(1) {
+                        -webkit-animation: inT 0.8s forwards;
+                        animation: inT 0.8s forwards;
+                    }
+                    
+                    .navTrigger.active i:nth-child(2) {
+                        -webkit-animation: inM 0.8s forwards;
+                        animation: inM 0.8s forwards;
+                    }
+                    
+                    .navTrigger.active i:nth-child(3) {
+                        -webkit-animation: inBtm 0.8s forwards;
+                        animation: inBtm 0.8s forwards;
+                }
+
+            }
+        
+        }
+        
+        .home {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/img/fotos/barriles.jpg);
+            background-position: center top;
+            background-size:cover;
+                .innerContainer{
+                    background-color: transparent;
+                    height: 80%;
+                    width: 50%;
+                    position: relative;
+                    top: 10%;
+                    margin: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    .mainH1 {
+                        font: $h1;
+                        color: $blanco;
+                        margin: 0 auto;
+                        align-self: flex-end;
+                        text-align: center;
+                    }
+                    span.innerFlexItem {
+                        border-top: 3px solid #cd903c;
+                        width: 40px;
+                    }
+                    p.innerFlexItem {
+                        text-transform: uppercase;
+                        color: white;
+                        text-align: center;
+                        letter-spacing: 2px;
+                        line-height: 25px;
+                    }
+                }
+            }
+
+        // .homeBlog {
+
+        // }   
+        
+        .homeContacto {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/img/fotos/superbodega.jpg);
+            background-position: center top;
+            background-size:cover;
+            .innerContainer{
+                background-color: transparent;
+                height: 80%;
+                width: 50%;
+                position: relative;
+                top: 10%;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                .mainH1 {
+                    font: $h1;
+                    color: $blanco;
+                    margin: 0 auto;
+                    align-self: flex-end;
+                    text-align: center;
+                }
+            }
+        }
+
+        .homeNosotros {
+            width: 100%;
+            height: 100vh;
+            background-image: url(../assets/img/fotos/vino_rojo.jpg);
+            background-position: center top;
+            background-size:cover;
+            .innerContainer{
+                background-color: transparent;
+                height: 80%;
+                width: 50%;
+                position: relative;
+                top: 10%;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                .homeNosotros__h1 {
+                    font: $h1;
+                    color: $blanco;
+                    margin: 0 auto;
+                    align-self: flex-end;
+                    text-align: center;
+                }
+            }
+        }
+
+        .homeServicios {
+            width: 100%;
+            height: 100vh;
+            background-image: url(../assets/img/fotos/catado.jpg);
+            background-position: left;
+            background-size:cover;
+            .innerContainer{
+                background-color: transparent;
+                height: 80%;
+                width: 50%;
+                position: relative;
+                top: 10%;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                .homeServicios__h1 {
+                    font: $h1;
+                    color: $blanco;
+                    background-color: $dorado;
+                    margin: 0 auto;
+                    align-self: flex-end;
+                    text-align: center;
+                }
+            }
+        }
+
+        
+
+        .homeTienda {
+            // .carouselExampleIndicators {
+
+            // }
+            .carousel-inner {
+                div {
+                    h1 {
+                        font: $h1;
+                        background-color: $dorado;
+                    }
+                }
+                .carousel-item {
+                    height: 65vh;
+                    min-height: 350px;
+                    background: no-repeat center center scroll;
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: cover;
+                }
+            }
+            
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                background-image: none;
+            }
+                 
+            .carousel-control-next-icon:after {
+                content: '>';
+                font-size: 55px;
+                color: $dorado;
+            }    
+                 
+            .carousel-control-prev-icon:after {
+                content: '<';
+                font-size: 55px;
+                color: $dorado;  
+            }
+            
+            .carousel .carousel-indicators li {
+                    background-color: $blanco;
+            }
+                  
+            .carousel .carousel-indicators .active {
+                    background-color:$dorado;
+            }
+        }
+
+        main {
+            section.details-card {
+                padding: 50px 0;
+                div.container {
+                    div.row {
+                        div {
+                            .card-content {
+                                background: $blanco;
+                                border: 4px;
+                                box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+                                .card-img {
+                                    position: relative;
+                                        overflow: hidden;
+                                        border-radius: 0;
+                                        z-index: 1;
+                                    img {
+                                        width: 100%;
+                                        height: auto;
+                                        display: block;
+                                        transition: transform .3s, filter 1.5s ease-in-out;
+                                        filter: grayscale(100%);
+                                    }
+                                    img:hover {
+                                        filter: grayscale(0);
+                                        transform: scale(1.1);
+                                    }
+                                    span {
+                                        position: absolute;
+                                        top: 15%;
+                                        left: 12%;
+                                        background: $dorado;
+                                        padding: 6px;
+                                        color:$blanco;
+                                        font-size: 12px;
+                                        border-radius: 4px;
+                                        -webkit-border-radius: 4px;
+                                        -moz-border-radius: 4px;
+                                        -ms-border-radius: 4px;
+                                        -o-border-radius: 4px;
+                                        transform: translate(-50%,-50%);
+                                        h4 {
+                                            font: $h4;
+                                            letter-spacing: 1px;
+                                            margin:0;
+                                            padding:10px 5px;
+                                            line-height: 0;
+                                        }
+                                    }
+                                }
+                                .card-desc {
+                                    padding: 1.25rem;
+                                    h3 {
+                                        font: $h3;
+                                        text-decoration: underline;
+                                        text-decoration-color:$dorado;
+                                        color: $negro;
+                                        line-height: 1.3em;
+                                        margin-top: 0;
+                                        margin-bottom: 5px;
+                                        padding: 0;
+                                    }
+                                    p {
+                                        color: $gris;
+                                        font: $p;
+                                        line-height: 1.5;
+                                        margin: 0px;
+                                        margin-bottom: 20px;
+                                        padding: 0;
+                                    }
+                                    a.btn-card {
+                                        background-color:$dorado;
+                                        color: $blanco;
+                                        box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+                                        padding: .84rem 2.14rem;
+                                        font: $navbar;
+                                        -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+                                        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+                                        -o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+                                        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+                                        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+                                        margin: 0;
+                                        border: 1px solid $dorado;
+                                        -webkit-border-radius: .125rem;
+                                        border-radius: .125rem;
+                                        cursor: pointer;
+                                        white-space: normal;
+                                        word-wrap: break-word;
+                                        color:$blanco;
+                                        text-decoration: none;
+                                    }
+                                    a.btn-card:hover {
+                                        background-color: transparent;
+                                        color:$dorado;
+                                        border: 1px solid $dorado;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .container {
+                div {
+                    h2 {
+                        font: $h2;
+                        text-decoration: underline;
+                        text-decoration-color: $dorado;
+                    }
+                }
+                div {
+                    div {
+                        .card {
+                            border:1px solid $dorado;
+                            margin-bottom: 10px;
+                            // .product-image {
+                            //     img {
+
+                            //     }
+                            // }
+                            .card-body {
+                                h3 {
+                                    font: $h3;
+                                }
+                                .star-rating {
+                                    line-height:32px;
+                                    font-size:1.25em;
+                                    .fa-star{
+                                        color: $dorado;
+                                    }
+                                }
+                                // .font {
+
+                                // }
+                                .comprar {
+                                    font: $navbar;
+                                    letter-spacing: 1px;
+                                    background-color: $dorado;
+                                    color: $blanco;  
+                                    border: 1px solid $dorado;
+                                    padding: 12px 32px;
+                                    text-decoration: none;
+                                    margin: 4px 2px;
+                                    cursor: pointer;
+                                    transition: 0.3s;
+                                }
+                                .comprar:hover {
+                                    background-color: transparent;
+                                    color: $dorado;
+                                    border: 1px solid $dorado;
+                                }
+                            }
+                            .card-footer {
+                                .font {
+                                    font: $navbar;
+                                    color: $negro;
+                                    letter-spacing: 2px;
+                                    
+
+                                        &--color {
+                                            color: $dorado;
+                                        }
+                                }
+                                div {
+                                    .font {
+                                        font: $navbar;
+                                        color:$dorado;
+                                        letter-spacing: 2px;
+                                    }
+                                    .font-color {
+                                        font: $navbar;
+                                        color: $dorado;
+                                        letter-spacing: 2px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }    
+            }
+        }
+
+        @mixin form_border {
+            border: 1px solid $dorado;
+        }
+        
+        
+        .mainContacto {
+            background-image: url(../assets/img/fotos/corchos_Fotor.jpg);
+            background-position: cover;
+            .container {
+                .main__form {
+                    width: 100%;
+                    min-height: 100vh;
+                    display: -webkit-box;
+                    display: -webkit-flex;
+                    display: -moz-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 15px;
+                    .form {
+                        h2 {
+                            font: $h2;
+                            text-decoration: underline;
+                            text-decoration-color: $dorado;
+                            margin-bottom: 20px; 
+                        }
+                        @include form_border();
+                        border-radius: 10px;
+                        width: 500px;
+                        background: $blanco;
+                        overflow: hidden;
+                        padding: 42px 55px 45px 55px;
+                        &__label {
+                            display: block;
+                            font: $cita;
+        
+                            &--error {
+                                color: $rojo;
+                            }
+                        }
+        
+                        &__label {
+                            margin-bottom: 2px;
+                        }
+                        
+                        &__input {
+                            border-width: 0px;
+                            border-bottom: 1px solid $dorado;
+                            background: transparent;
+                            width: 100%;
+                            padding: 5px;
+                            margin-bottom: 20px;
+                            outline: 0;
+                        }
+                        
+                        &__textarea {
+                            @include form_border();
+                            width: 100%;
+                            padding: 5px;
+                            margin-bottom: 2px;
+                            outline: 0;
+                        }
+        
+                        .form__select {
+                            @include form_border;
+                            margin-bottom: 10px;
+                        }
+        
+                        .containsBttns {
+                            display: flex;
+                            align-content: space-around;
+                            justify-content: space-around;
+                            
+                            .bttn {
+                                font: $navbar;
+                                width: 50%;
+                                letter-spacing: 1px;
+                                background-color:$dorado;
+                                border: 1px solid $dorado;
+                                border-radius: none;
+                                color:$blanco;
+                                padding: 12px 32px;
+                                text-decoration: none;
+                                margin: 4px 2px;
+                                cursor: pointer;
+                                transition: 0.3s;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                
+                                &:hover {
+                                    background-color:$blanco;
+                                    color: $dorado;
+                                    }
+                                    
+                                &__submit {
+                                        @extend .bttn;
+                                    &:hover {
+                                        @extend .bttn;
+                                        background-color:$negro;
+                                    }   
+                                }
+                            }    
+                        } 
+                    }
+                }    
+            }
+        }
+
+
+
+        main div { 
+            .homeNosotros__h2 {
+            font: $h2;
+            text-decoration: underline;
+            text-decoration-color: $dorado;
+            padding-top: 10px;
+            }
+            .homeNosotros_p {
+                font: $p;
+                letter-spacing: 2px;
+                line-height: 25px;
+            }
+        }
+
+        footer {
+            background-color: $negro;
+            section {
+                div {
+                    .logoFooter {
+                        img {
+                            width: 100px;
+                        }
+                    }
+                    cite {
+                        display: block;
+                        color: $dorado;
+                        font: $h2;
+                        font-style: italic;
+                        line-height: 30px;
+                        width: 80%;
+                        padding-bottom: 10px;
+                        padding-top: 20px;
+                    }
+                    span {
+                        color: $dorado;
+                        font: $cita;
+                        letter-spacing: 1px;
+                    }
+                }      
+                div {
+                    .subscribe {
+                        color: $gris;
+                        font: $h2;
+                    }
+                    .subscribeForm {
+                        .innerInput {
+                            label {
+                                color: $gris;
+                                font: $navbar;
+                            }   
+                            input {
+                                height: 44px;
+                                max-width: 400px;
+                                border: none;
+                                background-color: white;
+                                color: $negro;
+                                margin-right: 3px;
+                                padding-left: 20px;
+                            }
+                            .subscribeBtn { 
+                                max-width: 400px;
+                                height: 45px;
+                                font: $navbar;
+                                letter-spacing: 1px;
+                                background-color: $dorado;
+                                border: 1px solid $dorado;
+                                color:$blanco;
+                                text-decoration: none;               
+                                cursor: pointer;
+                                transition: 0.3s;
+                                margin-top: 10px;                     
+                            }
+                            .subscribeBtn:hover {
+                                background-color: $negro;
+                                color: $dorado; 
+                            }  
+                        }
+                    }       
+                       
+                }
+            }
+            section {
+                #media {
+                    .footerMedia {
+                        list-style-type: none;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        padding: 0%;
+                        li {
+                            padding: 10px;
+                            a {
+                                .fa-instagram, .fa-facebook, .fa-whatsapp {
+                                    color: $dorado;
+                                }
+                                .fa-instagram:hover, .fa-facebook:hover, .fa-whatsapp:hover {
+                                color: $blanco;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    
+    }
+
+
+    
+    
+
+
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+            .container {
+                margin: 0;
+            }
+        
+        }
+              
+    
+    @media screen and (max-width:768px) {        
+    body {
+        nav {
+            div {
+                .navTrigger {
+                    display: block;
+                }
+                .logo {
+                    margin-left: 15px;
+                }
+                .main_list {
+                    width: 100%;
+                    height: 0;
+                    overflow: hidden;
+                    ul {
+                        flex-direction: column;
+                        width: 100%;
+                        height: 100vh;
+                        right: 0;
+                        left: 0;
+                        bottom: 0;
+                        background-color: #111;
+                        /*same background color of navbar*/
+                        background-position: center top;
+                        li {
+                            width: 100%;
+                            text-align: right;
+                                a {
+                                    text-align: center;
+                                    width: 100%;
+                                    font-size: 2rem;
+                                    padding: 20px;
+                                }
+                            }    
+
+                        }
+                    }
+                .show_list {
+                    height: auto;
+                    display: none;
+                    }
+
+                .media_button {
+                    display: block;
+                    }
+                }
+            }
+    
+            footer {
+                section #logoContainer {
+                    text-align: center;
+                    cite {
+                        width: 100%;
+                    }
+                }
+            } 
+        } 
+       
+    }     
+            
+           
+     
+    
+        @keyframes fadeInAnimation { 
+            0% { 
+                opacity: 0; 
+            } 
+            100% { 
+                opacity: 1; 
+            } 
+        }
+
+
+        @-webkit-keyframes inM {
+            50% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(45deg);
+            }
+        }
+        
+        @keyframes inM {
+            50% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(45deg);
+            }
+        }
+        
+        @-webkit-keyframes outM {
+            50% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(45deg);
+            }
+        }
+        
+        @keyframes outM {
+            50% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(45deg);
+            }
+        }
+        
+        @-webkit-keyframes inT {
+            0% {
+                -webkit-transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                -webkit-transform: translateY(9px) rotate(0deg);
+            }
+            100% {
+                -webkit-transform: translateY(9px) rotate(135deg);
+            }
+        }
+        
+        @keyframes inT {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(9px) rotate(0deg);
+            }
+            100% {
+                transform: translateY(9px) rotate(135deg);
+            }
+        }
+        
+        @-webkit-keyframes outT {
+            0% {
+                -webkit-transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                -webkit-transform: translateY(9px) rotate(0deg);
+            }
+            100% {
+                -webkit-transform: translateY(9px) rotate(135deg);
+            }
+        }
+        
+        @keyframes outT {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(9px) rotate(0deg);
+            }
+            100% {
+                transform: translateY(9px) rotate(135deg);
+            }
+        }
+        
+        @-webkit-keyframes inBtm {
+            0% {
+                -webkit-transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                -webkit-transform: translateY(-9px) rotate(0deg);
+            }
+            100% {
+                -webkit-transform: translateY(-9px) rotate(135deg);
+            }
+        }
+        
+        @keyframes inBtm {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-9px) rotate(0deg);
+            }
+            100% {
+                transform: translateY(-9px) rotate(135deg);
+            }
+        }
+        
+        @-webkit-keyframes outBtm {
+            0% {
+                -webkit-transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                -webkit-transform: translateY(-9px) rotate(0deg);
+            }
+            100% {
+                -webkit-transform: translateY(-9px) rotate(135deg);
+            }
+        }
+        
+        @keyframes outBtm {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-9px) rotate(0deg);
+            }
+            100% {
+                transform: translateY(-9px) rotate(135deg);
+            }
+        }
+        
+        .affix {
+            padding: 0;
+            background-color: #111;
+        }
+}    
