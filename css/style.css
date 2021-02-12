@@ -121,6 +121,29 @@ html {
           text-align: center;
           letter-spacing: 2px;
           line-height: 25px; }
+    html body .homeBlog {
+      width: 100%;
+      height: 100vh;
+      background-image: url(../assets/img/fotos/rosado_Fotor.jpg);
+      background-position: center top;
+      background-size: cover; }
+      html body .homeBlog .innerContainer {
+        background-color: transparent;
+        height: 80%;
+        width: 50%;
+        position: relative;
+        top: 10%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center; }
+        html body .homeBlog .innerContainer .homeBlog__h1 {
+          font: 400 2.5em "Playfair Display", serif;
+          color: white;
+          margin: 0 auto;
+          align-self: flex-end;
+          text-align: center; }
     html body .homeContacto {
       width: 100%;
       height: 100vh;
@@ -342,6 +365,43 @@ html {
         font: 14px "Lato", sans-serif;
         color: #cd903c;
         letter-spacing: 2px; }
+    html body .blog section div div div img {
+      border: 1px solid #cd903c; }
+    html body .blog section div div div a h2 {
+      font: 400 1.5em "Playfair Display", serif;
+      color: #000000;
+      text-decoration: underline 1px #cd903c; }
+    html body .blog section div div div a:link {
+      text-decoration: none; }
+    html body .blog section div div div p {
+      font: 15px "Lato", sans-serif;
+      line-height: 1.5; }
+    html body .blog section div div div div a.pill {
+      background: #cd903c;
+      padding: 6px;
+      color: white;
+      font: 400 12px "Lato", sans-serif;
+      border-radius: 4px;
+      -webkit-border-radius: 4px; }
+    html body .blog section div div div div span {
+      font: 400 12px "Lato", sans-serif;
+      padding: 6px 0 6px 0; }
+    html body .blog section div div div ul li div a h3 {
+      font: 400 1.3em "Playfair Display", serif;
+      color: #000000;
+      text-decoration: underline 1px #cd903c; }
+    html body .blog section div div div ul li div a:link {
+      text-decoration: none; }
+    html body .blog section div div div ul li div div a.pill {
+      background: #cd903c;
+      padding: 6px;
+      color: white;
+      font: 400 12px "Lato", sans-serif;
+      border-radius: 4px;
+      -webkit-border-radius: 4px; }
+    html body .blog section div div div ul li div div span {
+      font: 400 12px "Lato", sans-serif;
+      padding: 6px 0 6px 0; }
     html body .mainContacto {
       background-image: url(../assets/img/fotos/corchos_Fotor.jpg);
       background-position: cover; }
