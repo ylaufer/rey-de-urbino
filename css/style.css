@@ -193,8 +193,7 @@ html {
     html body .homeServicios {
       width: 100%;
       height: 100vh;
-      background-image: url(../assets/img/fotos/catado.jpg);
-      background-position: left;
+      background-image: url(../assets/img/fotos/chinchin_Fotor.jpg);
       background-size: cover; }
       html body .homeServicios .innerContainer {
         background-color: transparent;
@@ -210,7 +209,6 @@ html {
         html body .homeServicios .innerContainer .homeServicios__h1 {
           font: 400 2.5em "Playfair Display", serif;
           color: white;
-          background-color: #cd903c;
           margin: 0 auto;
           align-self: flex-end;
           text-align: center; }
@@ -336,6 +334,10 @@ html {
         font-size: 1.25em; }
         html body main .container div div .card .card-body .star-rating .fa-star {
           color: #cd903c; }
+      html body main .container div div .card .card-body .scroll {
+        display: block;
+        height: 80px;
+        overflow-y: scroll; }
       html body main .container div div .card .card-body .comprar {
         font: 14px "Lato", sans-serif;
         letter-spacing: 1px;
@@ -487,6 +489,42 @@ html {
       font: 15px "Lato", sans-serif;
       letter-spacing: 2px;
       line-height: 25px; }
+    html body main div div div .texto {
+      height: 300px;
+      overflow-y: scroll; }
+      html body main div div div .texto .servicios {
+        font: 15px "Lato", sans-serif;
+        letter-spacing: 2px;
+        line-height: 25px; }
+      html body main div div div .texto ul li {
+        font: 15px "Lato", sans-serif;
+        list-style-type: none;
+        letter-spacing: 2px;
+        line-height: 25px; }
+    html body main div div div .texto::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 7px; }
+    html body main div div div .texto::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: #cd903c;
+      -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }
+    html body main div div div a.bttn, html body main div div div .mainContacto .container .main__form .form .containsBttns a.bttn__submit, html body .mainContacto .container .main__form .form .containsBttns main div div div a.bttn__submit, html body main div div div .mainContacto .container .main__form .form .containsBttns a.bttn__submit:hover, html body .mainContacto .container .main__form .form .containsBttns main div div div a.bttn__submit:hover {
+      font: 14px "Lato", sans-serif;
+      letter-spacing: 1px;
+      background-color: #cd903c;
+      border: 1px solid #cd903c;
+      border-radius: none;
+      color: white;
+      padding: 12px 32px;
+      text-decoration: none;
+      margin: 4px 2px;
+      cursor: pointer;
+      transition: 0.3s; }
+    html body main div div div a:hover {
+      background-color: white;
+      color: #cd903c; }
+    html body main div div div .fotoServicios {
+      min-height: 350px; }
     html body footer {
       background-color: #000000; }
       html body footer section div .logoFooter img {
@@ -580,6 +618,8 @@ html {
       display: none; }
     html body nav div .media_button {
       display: block; }
+    html body #fotoServicios {
+      min-height: auto; }
     html body footer section #logoContainer {
       text-align: center; }
       html body footer section #logoContainer cite {

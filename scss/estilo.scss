@@ -12,7 +12,7 @@ html {
         animation: fadeInAnimation ease 2s; 
                 animation-iteration-count: 1; 
                 animation-fill-mode: forwards; 
-        
+// NAV        
         nav {
             width: 100%;
             height: 65px;
@@ -121,7 +121,7 @@ html {
             }
         
         }
-        
+// HOME INDEX        
         .home {
             width: 100%;
             height: 100vh;
@@ -159,7 +159,7 @@ html {
                     }
                 }
             }
-
+// HOME BLOG
             .homeBlog {
                 width: 100%;
                 height: 100vh;
@@ -187,7 +187,7 @@ html {
                 }
             }
      
-        
+ // HOME CONTACTO       
         .homeContacto {
             width: 100%;
             height: 100vh;
@@ -214,7 +214,7 @@ html {
                 }
             }
         }
-
+// HOME NOSOTROS
         .homeNosotros {
             width: 100%;
             height: 100vh;
@@ -241,12 +241,11 @@ html {
                 }
             }
         }
-
+// HOME SERVICIOS
         .homeServicios {
             width: 100%;
             height: 100vh;
-            background-image: url(../assets/img/fotos/catado.jpg);
-            background-position: left;
+            background-image: url(../assets/img/fotos/chinchin_Fotor.jpg);
             background-size:cover;
             .innerContainer{
                 background-color: transparent;
@@ -262,7 +261,6 @@ html {
                 .homeServicios__h1 {
                     font: $h1;
                     color: $blanco;
-                    background-color: $dorado;
                     margin: 0 auto;
                     align-self: flex-end;
                     text-align: center;
@@ -270,10 +268,8 @@ html {
             }
         }
 
+// HOME TIENDA (CAROUSEL)
         .homeTienda {
-            // .carouselExampleIndicators {
-
-            // }
             .carousel-inner {
                 div {
                     h1 {
@@ -317,7 +313,8 @@ html {
                     background-color:$dorado;
             }
         }
-
+        
+// MAIN DEL INDEX 
         main {
             section.details-card {
                 padding: 50px 0;
@@ -419,6 +416,8 @@ html {
                     }
                 }
             }
+
+// MAIN DE TIENDA
             .container {
                 div {
                     h2 {
@@ -448,9 +447,11 @@ html {
                                         color: $dorado;
                                     }
                                 }
-                                // .font {
-
-                                // }
+                                .scroll {
+                                    display: block;
+                                    height: 80px;
+                                    overflow-y: scroll;
+                                }
                                 .comprar {
                                     font: $btn;
                                     letter-spacing: 1px;
@@ -498,7 +499,7 @@ html {
                 }    
             }
         }
-
+// MAIN DEL BLOG
         .blog {
             section {
                 div {
@@ -576,7 +577,8 @@ html {
         @mixin form_border {
             border: 1px solid $dorado;
         }
-        
+
+// MAIN DE CONTACTO
         
         .mainContacto {
             background-image: url(../assets/img/fotos/corchos_Fotor.jpg);
@@ -684,14 +686,14 @@ html {
             }
         }
 
-
+// MAIN DE NOSOTROS
 
         main div { 
             .homeNosotros__h2 {
-            font: $h2;
-            text-decoration: underline;
-            text-decoration-color: $dorado;
-            padding-top: 10px;
+                font: $h2;
+                text-decoration: underline;
+                text-decoration-color: $dorado;
+                padding-top: 10px;
             }
             .homeNosotros_p {
                 font: $p;
@@ -700,6 +702,64 @@ html {
             }
         }
 
+// MAIN DE SERVICIOS
+
+        main {
+            div {
+                div {
+                    div {
+                        .texto {
+                            height: 300px;
+                            overflow-y: scroll;
+                            .servicios {
+                                font: $p;
+                                letter-spacing: 2px;
+                                line-height: 25px;
+                            }
+                            ul {
+                                li {
+                                    font: $p;
+                                    list-style-type: none;
+                                    letter-spacing: 2px;
+                                    line-height: 25px;
+                                }
+                            }
+                        }
+                        .texto::-webkit-scrollbar { 
+                            -webkit-appearance: none; width: 7px; 
+                        } 
+                        .texto::-webkit-scrollbar-thumb { 
+                            border-radius: 4px; 
+                            background-color: $dorado; 
+                            -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5); 
+                        }
+
+                        a.bttn {
+                            font: $btn;
+                            letter-spacing: 1px;
+                            background-color:$dorado;
+                            border: 1px solid $dorado;
+                            border-radius: none;
+                            color:$blanco;
+                            padding: 12px 32px;
+                            text-decoration: none;
+                            margin: 4px 2px;
+                            cursor: pointer;
+                            transition: 0.3s;
+                        }
+                        a:hover {
+                                background-color:$blanco;
+                                color: $dorado;
+                        }
+                        .fotoServicios {
+                            min-height: 350px;
+                        }
+                    }    
+                }    
+            }
+        }        
+
+// FOOTER - SUBSCRIBE
         footer {
             background-color: $negro;
             section {
@@ -767,6 +827,8 @@ html {
                        
                 }
             }
+
+// FOOTER - MEDIA
             section {
                 #media {
                     .footerMedia {
@@ -793,11 +855,6 @@ html {
         
     
     }
-
-
-    
-    
-
 
 
     @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -855,6 +912,11 @@ html {
                     }
                 }
             }
+            
+            #fotoServicios {
+                min-height: auto;
+            }
+
     
             footer {
                 section #logoContainer {
