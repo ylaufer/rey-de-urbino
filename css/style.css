@@ -498,7 +498,6 @@ html {
         line-height: 25px; }
       html body main div div div .texto ul li {
         font: 15px "Lato", sans-serif;
-        list-style-type: none;
         letter-spacing: 2px;
         line-height: 25px; }
     html body main div div div .texto::-webkit-scrollbar {
