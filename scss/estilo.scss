@@ -277,8 +277,8 @@ html {
                 div {
                     h1 {
                         font: $h1;
-                        background: rgb(0,0,0);
-                        background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.30155812324929976) 100%);
+                        color:$blanco;
+                        mix-blend-mode: difference;
                     }
                 }
                 .carousel-item {

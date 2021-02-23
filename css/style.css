@@ -217,8 +217,8 @@ html {
           text-align: center; }
     html body .homeTienda .carousel-inner div h1 {
       font: 400 2.5em "Playfair Display", serif;
-      background: black;
-      background: radial-gradient(circle, black 0%, rgba(0, 0, 0, 0.301558) 100%); }
+      color: white;
+      mix-blend-mode: difference; }
     html body .homeTienda .carousel-inner .carousel-item {
       height: 65vh;
       min-height: 350px;
