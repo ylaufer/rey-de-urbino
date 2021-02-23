@@ -14,12 +14,15 @@ html {
                 animation-fill-mode: forwards; 
 // NAV        
         nav {
+            background: rgb(255,255,255);
+            background: linear-gradient(0deg, rgba(255,255,255,0.01584383753501406) 0%, rgba(0,0,0,0.8421743697478992) 100%);
             width: 100%;
             height: 65px;
             position: fixed;
             line-height: 65px;
             text-align: center;
             z-index: 100;
+            transition: 0.3s;
             div {
                 .logo {
                     float: left;
@@ -274,7 +277,8 @@ html {
                 div {
                     h1 {
                         font: $h1;
-                        background-color: $dorado;
+                        background: rgb(0,0,0);
+                        background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.30155812324929976) 100%);
                     }
                 }
                 .carousel-item {
@@ -316,9 +320,9 @@ html {
         
 // MAIN DEL INDEX 
         main {
-            section.details-card {
-                padding: 50px 0;
-                div.container {
+            div.container {
+                section.details-card {
+                    padding: 24px 0 50px 0;
                     div.row {
                         div {
                             .card-content {
@@ -383,6 +387,7 @@ html {
                                         margin: 0px;
                                         margin-bottom: 20px;
                                         padding: 0;
+                                        min-height: 88px;
                                     }
                                     a.btn-card {
                                         background-color:$dorado;
@@ -431,11 +436,6 @@ html {
                         .card {
                             border:1px solid $dorado;
                             margin-bottom: 10px;
-                            // .product-image {
-                            //     img {
-
-                            //     }
-                            // }
                             .card-body {
                                 h3 {
                                     font: $h3;
@@ -732,23 +732,28 @@ html {
                             background-color: $dorado; 
                             -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5); 
                         }
-
-                        a.bttn {
-                            font: $btn;
-                            letter-spacing: 1px;
-                            background-color:$dorado;
-                            border: 1px solid $dorado;
-                            border-radius: none;
-                            color:$blanco;
-                            padding: 12px 32px;
-                            text-decoration: none;
-                            margin: 4px 2px;
-                            cursor: pointer;
-                            transition: 0.3s;
-                        }
-                        a:hover {
+                            .botonera {
+                                display: flex;
+                                justify-content: center;
+                            a.bttn {
+                                font: $btn;
+                                letter-spacing: 1px;
+                                background-color:$dorado;
+                                border: 1px solid $dorado;
+                                border-radius: 0;
+                                color:$blanco;
+                                padding: 12px 32px;
+                                text-decoration: none;
+                                margin: 4px 2px;
+                                cursor: pointer;
+                                transition: 0.3s;
+                                box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+                            }
+                        
+                            a:hover {
                                 background-color:$blanco;
                                 color: $dorado;
+                            }
                         }
                         .fotoServicios {
                             min-height: 350px;
@@ -886,7 +891,6 @@ html {
                         left: 0;
                         bottom: 0;
                         background-color: #111;
-                        /*same background color of navbar*/
                         background-position: center top;
                         li {
                             width: 100%;

@@ -8,12 +8,15 @@ html {
     animation-iteration-count: 1;
     animation-fill-mode: forwards; }
     html body nav {
+      background: white;
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.0158438) 0%, rgba(0, 0, 0, 0.842174) 100%);
       width: 100%;
       height: 65px;
       position: fixed;
       line-height: 65px;
       text-align: center;
-      z-index: 100; }
+      z-index: 100;
+      transition: 0.3s; }
       html body nav div .logo {
         float: left;
         width: auto;
@@ -214,7 +217,8 @@ html {
           text-align: center; }
     html body .homeTienda .carousel-inner div h1 {
       font: 400 2.5em "Playfair Display", serif;
-      background-color: #cd903c; }
+      background: black;
+      background: radial-gradient(circle, black 0%, rgba(0, 0, 0, 0.301558) 100%); }
     html body .homeTienda .carousel-inner .carousel-item {
       height: 65vh;
       min-height: 350px;
@@ -238,27 +242,27 @@ html {
       background-color: white; }
     html body .homeTienda .carousel .carousel-indicators .active {
       background-color: #cd903c; }
-    html body main section.details-card {
-      padding: 50px 0; }
-      html body main section.details-card div.container div.row div .card-content {
+    html body main div.container section.details-card {
+      padding: 24px 0 50px 0; }
+      html body main div.container section.details-card div.row div .card-content {
         background: white;
         border: 4px;
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
-        html body main section.details-card div.container div.row div .card-content .card-img {
+        html body main div.container section.details-card div.row div .card-content .card-img {
           position: relative;
           overflow: hidden;
           border-radius: 0;
           z-index: 1; }
-          html body main section.details-card div.container div.row div .card-content .card-img img {
+          html body main div.container section.details-card div.row div .card-content .card-img img {
             width: 100%;
             height: auto;
             display: block;
             transition: transform .3s, filter 1.5s ease-in-out;
             filter: grayscale(100%); }
-          html body main section.details-card div.container div.row div .card-content .card-img img:hover {
+          html body main div.container section.details-card div.row div .card-content .card-img img:hover {
             filter: grayscale(0);
             transform: scale(1.1); }
-          html body main section.details-card div.container div.row div .card-content .card-img span {
+          html body main div.container section.details-card div.row div .card-content .card-img span {
             position: absolute;
             top: 15%;
             left: 12%;
@@ -272,15 +276,15 @@ html {
             -ms-border-radius: 4px;
             -o-border-radius: 4px;
             transform: translate(-50%, -50%); }
-            html body main section.details-card div.container div.row div .card-content .card-img span h4 {
+            html body main div.container section.details-card div.row div .card-content .card-img span h4 {
               font: 400 12px "Lato", sans-serif;
               letter-spacing: 1px;
               margin: 0;
               padding: 10px 5px;
               line-height: 0; }
-        html body main section.details-card div.container div.row div .card-content .card-desc {
+        html body main div.container section.details-card div.row div .card-content .card-desc {
           padding: 1.25rem; }
-          html body main section.details-card div.container div.row div .card-content .card-desc h3 {
+          html body main div.container section.details-card div.row div .card-content .card-desc h3 {
             font: 400 1.3em "Playfair Display", serif;
             text-decoration: underline;
             text-decoration-color: #cd903c;
@@ -289,14 +293,15 @@ html {
             margin-top: 0;
             margin-bottom: 5px;
             padding: 0; }
-          html body main section.details-card div.container div.row div .card-content .card-desc p {
+          html body main div.container section.details-card div.row div .card-content .card-desc p {
             color: #adabac;
             font: 15px "Lato", sans-serif;
             line-height: 1.5;
             margin: 0px;
             margin-bottom: 20px;
-            padding: 0; }
-          html body main section.details-card div.container div.row div .card-content .card-desc a.btn-card {
+            padding: 0;
+            min-height: 88px; }
+          html body main div.container section.details-card div.row div .card-content .card-desc a.btn-card {
             background-color: #cd903c;
             color: white;
             box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -316,7 +321,7 @@ html {
             word-wrap: break-word;
             color: white;
             text-decoration: none; }
-          html body main section.details-card div.container div.row div .card-content .card-desc a.btn-card:hover {
+          html body main div.container section.details-card div.row div .card-content .card-desc a.btn-card:hover {
             background-color: transparent;
             color: #cd903c;
             border: 1px solid #cd903c; }
@@ -507,21 +512,25 @@ html {
       border-radius: 4px;
       background-color: #cd903c;
       -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }
-    html body main div div div a.bttn, html body main div div div .mainContacto .container .main__form .form .containsBttns a.bttn__submit, html body .mainContacto .container .main__form .form .containsBttns main div div div a.bttn__submit, html body main div div div .mainContacto .container .main__form .form .containsBttns a.bttn__submit:hover, html body .mainContacto .container .main__form .form .containsBttns main div div div a.bttn__submit:hover {
-      font: 14px "Lato", sans-serif;
-      letter-spacing: 1px;
-      background-color: #cd903c;
-      border: 1px solid #cd903c;
-      border-radius: none;
-      color: white;
-      padding: 12px 32px;
-      text-decoration: none;
-      margin: 4px 2px;
-      cursor: pointer;
-      transition: 0.3s; }
-    html body main div div div a:hover {
-      background-color: white;
-      color: #cd903c; }
+    html body main div div div .botonera {
+      display: flex;
+      justify-content: center; }
+      html body main div div div .botonera a.bttn, html body main div div div .botonera .mainContacto .container .main__form .form .containsBttns a.bttn__submit, html body .mainContacto .container .main__form .form .containsBttns main div div div .botonera a.bttn__submit {
+        font: 14px "Lato", sans-serif;
+        letter-spacing: 1px;
+        background-color: #cd903c;
+        border: 1px solid #cd903c;
+        border-radius: 0;
+        color: white;
+        padding: 12px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+      html body main div div div .botonera a:hover {
+        background-color: white;
+        color: #cd903c; }
     html body main div div div .fotoServicios {
       min-height: 350px; }
     html body footer {
@@ -602,7 +611,6 @@ html {
         left: 0;
         bottom: 0;
         background-color: #111;
-        /*same background color of navbar*/
         background-position: center top; }
         html body nav div .main_list ul li {
           width: 100%;
