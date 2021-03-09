@@ -215,12 +215,24 @@ html {
           margin: 0 auto;
           align-self: flex-end;
           text-align: center; }
+    html body .homeTienda .recuadro {
+      position: absolute;
+      z-index: 50;
+      left: 45%;
+      top: 47%;
+      height: 200px;
+      width: 200px;
+      justify-content: center;
+      align-items: center; }
+      html body .homeTienda .recuadro h1 {
+        font: 400 2.5em "Playfair Display", serif;
+        color: white; }
     html body .homeTienda .carousel-inner div h1 {
       font: 400 2.5em "Playfair Display", serif;
       color: white;
       mix-blend-mode: difference; }
     html body .homeTienda .carousel-inner .carousel-item {
-      height: 65vh;
+      height: 100vh;
       min-height: 350px;
       background: no-repeat center center scroll;
       -webkit-background-size: cover;
@@ -325,53 +337,58 @@ html {
             background-color: transparent;
             color: #cd903c;
             border: 1px solid #cd903c; }
-    html body main .container div h2 {
-      font: 400 1.5em "Playfair Display", serif;
-      text-decoration: underline;
-      text-decoration-color: #cd903c; }
-    html body main .container div div .card {
-      border: 1px solid #cd903c;
-      margin-bottom: 10px; }
-      html body main .container div div .card .card-body h3 {
-        font: 400 1.3em "Playfair Display", serif; }
-      html body main .container div div .card .card-body .star-rating {
-        line-height: 32px;
-        font-size: 1.25em; }
-        html body main .container div div .card .card-body .star-rating .fa-star {
-          color: #cd903c; }
-      html body main .container div div .card .card-body .scroll {
-        display: block;
-        height: 80px;
-        overflow-y: scroll; }
-      html body main .container div div .card .card-body .comprar {
-        font: 14px "Lato", sans-serif;
-        letter-spacing: 1px;
-        background-color: #cd903c;
-        color: white;
+    html body .mainTienda {
+      margin-top: 100px; }
+      html body .mainTienda .container div h2 {
+        font: 400 1.5em "Playfair Display", serif;
+        text-decoration: underline;
+        text-decoration-color: #cd903c; }
+      html body .mainTienda .container div div .card {
         border: 1px solid #cd903c;
-        padding: 12px 32px;
-        text-decoration: none;
-        margin: 4px 2px;
-        cursor: pointer;
-        transition: 0.3s; }
-      html body main .container div div .card .card-body .comprar:hover {
-        background-color: transparent;
-        color: #cd903c;
-        border: 1px solid #cd903c; }
-      html body main .container div div .card .card-footer .font {
-        font: 14px "Lato", sans-serif;
-        color: #000000;
-        letter-spacing: 2px; }
-        html body main .container div div .card .card-footer .font--color {
-          color: #cd903c; }
-      html body main .container div div .card .card-footer div .font {
-        font: 14px "Lato", sans-serif;
-        color: #cd903c;
-        letter-spacing: 2px; }
-      html body main .container div div .card .card-footer div .font-color {
-        font: 14px "Lato", sans-serif;
-        color: #cd903c;
-        letter-spacing: 2px; }
+        margin-bottom: 10px; }
+        html body .mainTienda .container div div .card .product-image img {
+          margin-top: 20px; }
+        html body .mainTienda .container div div .card .card-body h3 {
+          font: 400 1.3em "Playfair Display", serif; }
+        html body .mainTienda .container div div .card .card-body .star-rating {
+          line-height: 32px;
+          font-size: 1.25em; }
+          html body .mainTienda .container div div .card .card-body .star-rating .fa-star {
+            color: #cd903c; }
+        html body .mainTienda .container div div .card .card-body .scroll {
+          display: block;
+          height: 80px;
+          overflow-y: scroll;
+          max-height: 70px; }
+        html body .mainTienda .container div div .card .card-body .comprar {
+          font: 14px "Lato", sans-serif;
+          letter-spacing: 1px;
+          background-color: #cd903c;
+          color: white;
+          border: 1px solid #cd903c;
+          padding: 12px 32px;
+          text-decoration: none;
+          margin: 4px 2px;
+          cursor: pointer;
+          transition: 0.3s; }
+        html body .mainTienda .container div div .card .card-body .comprar:hover {
+          background-color: transparent;
+          color: #cd903c;
+          border: 1px solid #cd903c; }
+        html body .mainTienda .container div div .card .card-footer .font {
+          font: 14px "Lato", sans-serif;
+          color: #000000;
+          letter-spacing: 2px; }
+          html body .mainTienda .container div div .card .card-footer .font--color {
+            color: #cd903c; }
+        html body .mainTienda .container div div .card .card-footer div .font {
+          font: 14px "Lato", sans-serif;
+          color: #cd903c;
+          letter-spacing: 2px; }
+        html body .mainTienda .container div div .card .card-footer div .font-color {
+          font: 14px "Lato", sans-serif;
+          color: #cd903c;
+          letter-spacing: 2px; }
     html body .blog section div div div img {
       border: 1px solid #cd903c; }
     html body .blog section div div div a h2 {
@@ -534,7 +551,9 @@ html {
     html body main div div div .fotoServicios {
       min-height: 350px; }
     html body footer {
-      background-color: #000000; }
+      background-color: #000000;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px; }
       html body footer section div .logoFooter img {
         width: 100px; }
       html body footer section div cite {
@@ -579,6 +598,21 @@ html {
       html body footer section div .subscribeForm .innerInput .subscribeBtn:hover {
         background-color: #000000;
         color: #cd903c; }
+      html body footer #realizado {
+        background-color: #000000;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px; }
+        html body footer #realizado div p {
+          color: #adabac;
+          text-align: center;
+          font: 14px "Lato", sans-serif;
+          margin-top: 8px;
+          margin-bottom: 8px; }
+          html body footer #realizado div p a {
+            color: #adabac;
+            text-decoration: underline; }
+          html body footer #realizado div p a:hover {
+            color: white; }
       html body footer section #media .footerMedia {
         list-style-type: none;
         display: flex;

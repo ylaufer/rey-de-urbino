@@ -273,6 +273,20 @@ html {
 
 // HOME TIENDA (CAROUSEL)
         .homeTienda {
+            .recuadro {
+                position: absolute;
+                    z-index: 50;
+                    left: 45%;
+                    top: 47%;
+                    height: 200px;
+                    width: 200px;
+                    justify-content: center;
+                    align-items: center;
+                h1 {
+                    font: $h1;
+                    color: $blanco;
+                }
+            }    
             .carousel-inner {
                 div {
                     h1 {
@@ -282,7 +296,7 @@ html {
                     }
                 }
                 .carousel-item {
-                    height: 65vh;
+                    height: 100vh;
                     min-height: 350px;
                     background: no-repeat center center scroll;
                     -webkit-background-size: cover;
@@ -421,8 +435,11 @@ html {
                     }
                 }
             }
+        }    
 
 // MAIN DE TIENDA
+        .mainTienda {
+            margin-top: 100px;
             .container {
                 div {
                     h2 {
@@ -436,6 +453,11 @@ html {
                         .card {
                             border:1px solid $dorado;
                             margin-bottom: 10px;
+                            .product-image {
+                                img {
+                                    margin-top: 20px;
+                                }
+                            }
                             .card-body {
                                 h3 {
                                     font: $h3;
@@ -451,6 +473,7 @@ html {
                                     display: block;
                                     height: 80px;
                                     overflow-y: scroll;
+                                    max-height: 70px;
                                 }
                                 .comprar {
                                     font: $btn;
@@ -766,6 +789,8 @@ html {
 // FOOTER - SUBSCRIBE
         footer {
             background-color: $negro;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
             section {
                 div {
                     .logoFooter {
@@ -832,6 +857,29 @@ html {
                 }
             }
 
+// FOOTER - REALIZADO            
+            #realizado {
+                background-color:$negro;
+                border-bottom-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+                div {
+                    p {
+                        color: $gris;
+                        text-align: center;
+                        font: $btn;
+                        margin-top: 8px;
+                        margin-bottom: 8px;
+                        a {
+                            color: $gris;
+                            text-decoration: underline;
+                        }
+                        a:hover {
+                            color: $blanco;
+                        }
+                    }
+                }
+            }
+
 // FOOTER - MEDIA
             section {
                 #media {
@@ -855,9 +903,7 @@ html {
                     }
                 }
             }
-        }
-        
-    
+        }  
     }
 
 
