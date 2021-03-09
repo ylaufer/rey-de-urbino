@@ -254,89 +254,97 @@ html {
       background-color: white; }
     html body .homeTienda .carousel .carousel-indicators .active {
       background-color: #cd903c; }
-    html body main div.container section.details-card {
-      padding: 24px 0 50px 0; }
-      html body main div.container section.details-card div.row div .card-content {
-        background: white;
-        border: 4px;
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
-        html body main div.container section.details-card div.row div .card-content .card-img {
-          position: relative;
-          overflow: hidden;
-          border-radius: 0;
-          z-index: 1; }
-          html body main div.container section.details-card div.row div .card-content .card-img img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform .3s, filter 1.5s ease-in-out;
-            filter: grayscale(100%); }
-          html body main div.container section.details-card div.row div .card-content .card-img img:hover {
-            filter: grayscale(0);
-            transform: scale(1.1); }
-          html body main div.container section.details-card div.row div .card-content .card-img span {
-            position: absolute;
-            top: 15%;
-            left: 12%;
-            background: #cd903c;
-            padding: 6px;
-            color: white;
-            font-size: 12px;
-            border-radius: 4px;
-            -webkit-border-radius: 4px;
-            -moz-border-radius: 4px;
-            -ms-border-radius: 4px;
-            -o-border-radius: 4px;
-            transform: translate(-50%, -50%); }
-            html body main div.container section.details-card div.row div .card-content .card-img span h4 {
-              font: 400 12px "Lato", sans-serif;
-              letter-spacing: 1px;
+    html body .mainIndex {
+      margin-top: 100px; }
+      html body .mainIndex div.container div h2 {
+        font: 400 1.5em "Playfair Display", serif;
+        letter-spacing: 1px;
+        text-decoration: underline;
+        text-decoration-color: #cd903c;
+        margin-bottom: 16px; }
+      html body .mainIndex div.container section.details-card {
+        padding: 24px 0 50px 0; }
+        html body .mainIndex div.container section.details-card div.row div .card-content {
+          background: white;
+          border: 4px;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+          html body .mainIndex div.container section.details-card div.row div .card-content .card-img {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0;
+            z-index: 1; }
+            html body .mainIndex div.container section.details-card div.row div .card-content .card-img img {
+              width: 100%;
+              height: auto;
+              display: block;
+              transition: transform .3s, filter 1.5s ease-in-out;
+              filter: grayscale(100%); }
+            html body .mainIndex div.container section.details-card div.row div .card-content .card-img img:hover {
+              filter: grayscale(0);
+              transform: scale(1.1); }
+            html body .mainIndex div.container section.details-card div.row div .card-content .card-img span {
+              position: absolute;
+              top: 15%;
+              left: 12%;
+              background: #cd903c;
+              padding: 6px;
+              color: white;
+              font-size: 12px;
+              border-radius: 4px;
+              -webkit-border-radius: 4px;
+              -moz-border-radius: 4px;
+              -ms-border-radius: 4px;
+              -o-border-radius: 4px;
+              transform: translate(-50%, -50%); }
+              html body .mainIndex div.container section.details-card div.row div .card-content .card-img span h4 {
+                font: 400 12px "Lato", sans-serif;
+                letter-spacing: 1px;
+                margin: 0;
+                padding: 10px 5px;
+                line-height: 0; }
+          html body .mainIndex div.container section.details-card div.row div .card-content .card-desc {
+            padding: 1.25rem; }
+            html body .mainIndex div.container section.details-card div.row div .card-content .card-desc h3 {
+              font: 400 1.3em "Playfair Display", serif;
+              text-decoration: underline;
+              text-decoration-color: #cd903c;
+              color: #000000;
+              line-height: 1.3em;
+              margin-top: 0;
+              margin-bottom: 5px;
+              padding: 0; }
+            html body .mainIndex div.container section.details-card div.row div .card-content .card-desc p {
+              color: #adabac;
+              font: 15px "Lato", sans-serif;
+              line-height: 1.5;
+              margin: 0px;
+              margin-bottom: 20px;
+              padding: 0;
+              min-height: 88px; }
+            html body .mainIndex div.container section.details-card div.row div .card-content .card-desc a.btn-card {
+              background-color: #cd903c;
+              color: white;
+              box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+              padding: .84rem 2.14rem;
+              font: 14px "Lato", sans-serif;
+              -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+              transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+              -o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+              transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+              transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
               margin: 0;
-              padding: 10px 5px;
-              line-height: 0; }
-        html body main div.container section.details-card div.row div .card-content .card-desc {
-          padding: 1.25rem; }
-          html body main div.container section.details-card div.row div .card-content .card-desc h3 {
-            font: 400 1.3em "Playfair Display", serif;
-            text-decoration: underline;
-            text-decoration-color: #cd903c;
-            color: #000000;
-            line-height: 1.3em;
-            margin-top: 0;
-            margin-bottom: 5px;
-            padding: 0; }
-          html body main div.container section.details-card div.row div .card-content .card-desc p {
-            color: #adabac;
-            font: 15px "Lato", sans-serif;
-            line-height: 1.5;
-            margin: 0px;
-            margin-bottom: 20px;
-            padding: 0;
-            min-height: 88px; }
-          html body main div.container section.details-card div.row div .card-content .card-desc a.btn-card {
-            background-color: #cd903c;
-            color: white;
-            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-            padding: .84rem 2.14rem;
-            font: 14px "Lato", sans-serif;
-            -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
-            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
-            -o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
-            margin: 0;
-            border: 1px solid #cd903c;
-            -webkit-border-radius: .125rem;
-            border-radius: .125rem;
-            cursor: pointer;
-            white-space: normal;
-            word-wrap: break-word;
-            color: white;
-            text-decoration: none; }
-          html body main div.container section.details-card div.row div .card-content .card-desc a.btn-card:hover {
-            background-color: transparent;
-            color: #cd903c;
-            border: 1px solid #cd903c; }
+              border: 1px solid #cd903c;
+              -webkit-border-radius: .125rem;
+              border-radius: .125rem;
+              cursor: pointer;
+              white-space: normal;
+              word-wrap: break-word;
+              color: white;
+              text-decoration: none; }
+            html body .mainIndex div.container section.details-card div.row div .card-content .card-desc a.btn-card:hover {
+              background-color: transparent;
+              color: #cd903c;
+              border: 1px solid #cd903c; }
     html body .mainTienda {
       margin-top: 100px; }
       html body .mainTienda .container div h2 {
@@ -511,45 +519,58 @@ html {
       font: 15px "Lato", sans-serif;
       letter-spacing: 2px;
       line-height: 25px; }
-    html body main div div div .texto {
-      height: 300px;
-      overflow-y: scroll; }
-      html body main div div div .texto .servicios {
-        font: 15px "Lato", sans-serif;
-        letter-spacing: 2px;
-        line-height: 25px; }
-      html body main div div div .texto ul li {
-        font: 15px "Lato", sans-serif;
-        letter-spacing: 2px;
-        line-height: 25px; }
-    html body main div div div .texto::-webkit-scrollbar {
-      -webkit-appearance: none;
-      width: 7px; }
-    html body main div div div .texto::-webkit-scrollbar-thumb {
-      border-radius: 4px;
-      background-color: #cd903c;
-      -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }
-    html body main div div div .botonera {
-      display: flex;
-      justify-content: center; }
-      html body main div div div .botonera a.bttn, html body main div div div .botonera .mainContacto .container .main__form .form .containsBttns a.bttn__submit, html body .mainContacto .container .main__form .form .containsBttns main div div div .botonera a.bttn__submit {
-        font: 14px "Lato", sans-serif;
-        letter-spacing: 1px;
+    html body .mainServicios {
+      margin-top: 100px;
+      margin-bottom: 100px; }
+      html body .mainServicios div div h2 {
+        font: 400 1.5em "Playfair Display", serif;
+        text-decoration: underline;
+        text-decoration-color: #cd903c;
+        margin-bottom: 16px; }
+      html body .mainServicios div div div .texto {
+        height: 300px;
+        overflow-y: scroll; }
+        html body .mainServicios div div div .texto h3 {
+          font: 400 1.3em "Playfair Display", serif;
+          text-decoration: underline;
+          text-decoration-color: #cd903c; }
+        html body .mainServicios div div div .texto .servicios {
+          font: 15px "Lato", sans-serif;
+          letter-spacing: 2px;
+          line-height: 25px; }
+        html body .mainServicios div div div .texto ul li {
+          font: 15px "Lato", sans-serif;
+          letter-spacing: 2px;
+          line-height: 25px; }
+      html body .mainServicios div div div .texto::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 7px; }
+      html body .mainServicios div div div .texto::-webkit-scrollbar-thumb {
+        border-radius: 4px;
         background-color: #cd903c;
-        border: 1px solid #cd903c;
-        border-radius: 0;
-        color: white;
-        padding: 12px 32px;
-        text-decoration: none;
-        margin: 4px 2px;
-        cursor: pointer;
-        transition: 0.3s;
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
-      html body main div div div .botonera a:hover {
-        background-color: white;
-        color: #cd903c; }
-    html body main div div div .fotoServicios {
-      min-height: 350px; }
+        -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }
+      html body .mainServicios div div div .botonera {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px; }
+        html body .mainServicios div div div .botonera a.bttn, html body .mainServicios div div div .botonera .mainContacto .container .main__form .form .containsBttns a.bttn__submit, html body .mainContacto .container .main__form .form .containsBttns .mainServicios div div div .botonera a.bttn__submit {
+          font: 14px "Lato", sans-serif;
+          letter-spacing: 1px;
+          background-color: #cd903c;
+          border: 1px solid #cd903c;
+          border-radius: 0;
+          color: white;
+          padding: 12px 32px;
+          text-decoration: none;
+          margin: 4px 2px;
+          cursor: pointer;
+          transition: 0.3s;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+        html body .mainServicios div div div .botonera a:hover {
+          background-color: white;
+          color: #cd903c; }
+      html body .mainServicios div div div .fotoServicios {
+        min-height: 350px; }
     html body footer {
       background-color: #000000;
       border-bottom-left-radius: 25px;

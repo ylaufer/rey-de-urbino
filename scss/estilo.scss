@@ -333,8 +333,18 @@ html {
         }
         
 // MAIN DEL INDEX 
-        main {
+        .mainIndex {
+            margin-top: 100px;
             div.container {
+                div {
+                    h2 {
+                        font: $h2;
+                        letter-spacing: 1px;
+                        text-decoration: underline;
+                        text-decoration-color:$dorado;
+                        margin-bottom: 16px;
+                    }
+                }
                 section.details-card {
                     padding: 24px 0 50px 0;
                     div.row {
@@ -727,13 +737,28 @@ html {
 
 // MAIN DE SERVICIOS
 
-        main {
+        .mainServicios {
+            margin-top: 100px;
+            margin-bottom: 100px;      
             div {
+                div {
+                    h2 {
+                        font: $h2;
+                        text-decoration: underline;
+                        text-decoration-color: $dorado;
+                        margin-bottom: 16px;
+                    }
+                }
                 div {
                     div {
                         .texto {
                             height: 300px;
                             overflow-y: scroll;
+                            h3 {
+                                font: $h3;
+                                text-decoration: underline;
+                                text-decoration-color: $dorado;
+                            }
                             .servicios {
                                 font: $p;
                                 letter-spacing: 2px;
@@ -758,6 +783,7 @@ html {
                             .botonera {
                                 display: flex;
                                 justify-content: center;
+                                margin-top: 10px;
                             a.bttn {
                                 font: $btn;
                                 letter-spacing: 1px;
