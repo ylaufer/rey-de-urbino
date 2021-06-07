@@ -32,43 +32,12 @@
                         <li><a href="../pages/nosotros.html">Nosotros</a></li>
                         <li><a href="../pages/servicios.html">Servicios</a>
                         </li>
-                        <li><a href="#">Tienda</a></li>
+                        <li><a href="../pages/tienda.html">Tienda</a></li>
                         <li><a href="../pages/blog.html">Blog</a></li>
                         <li><a href="../pages/contacto.html">Contacto</a></li>
-                        <li><a href="../pages/carrito.html">
-                                <i class="fa fa-shopping-cart fa-2x"></i>
-                            </a>
-                            <ul>
-                                <li class="submenu">
-                                    <div id="carrito">
-                                        <div>
-                                            <table>
-                                                <thead>
-                                                    <tr id="encabezado">
-                                                        <th>Imagen</th>
-                                                        <th>Nombre</th>
-                                                        <th>Precio</th>
-                                                        <th>Cantidad</th>
-                                                        <th></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody id="lista-carrito"></tbody>
-                                                <tfoot>
-                                                    <tr>
-                                                        <th>Subtotal:</th>
-                                                        <th></th>
-                                                        <th></th>
-                                                        <th>$0,00</th>
-                                                    </tr>
-                                                </tfoot>
-                                            </table>
-                                        </div>
-                                        <hr class="linea">
-                                        <a class="irACarrito" href="../pages/carrito.html">Ir a Carrito</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
+                        <li><a href="#">
+                            <i class="fa fa-shopping-cart fa-2x"></i>
+                        </a></li>
                     </ul>
                 </div>
                 <span class="navTrigger">
@@ -78,49 +47,23 @@
                 </span>
             </div>
         </nav>
-        <section class="homeTienda">
-            <div class="recuadro">
-                <h1>Tienda</h1>
-            </div>
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-caption d-none d-md-block">
-                        <!-- <h1 class="display-4">Tienda</h1> -->
-                    </div>
-                  <!-- Slide One - Set the background image for this slide in the line below -->
-                  <div class="carousel-item active" style="background-image: url('../assets/img/fotos/marca1.jpg')" alt="Vino Loxton">
-                  </div>
-                  <!-- Slide Two - Set the background image for this slide in the line below -->
-                  <div class="carousel-item" style="background-image: url('../assets/img/fotos/marca2.jpg')" alt="Vino Hennessy">
-                  </div>
-                  <!-- Slide Three - Set the background image for this slide in the line below -->
-                  <div class="carousel-item" style="background-image: url('../assets/img/fotos/marca3.jpg')" alt="Vino Ata Ranghi">
-                  </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
-                    </a>
-              </div>
+        <section class="homeCarrito">
+            
         </section>
-        <main class="mainTienda">
-            <div class="container">
-                <div class="row d-flex justify-content-center mb-4">
-                    <h2>Ofertas de la semana</h2>
-                </div>
-                 <!-- Comienzan cards -->
-                 <div id="cardsGeneradas" class=row py-3 mt-4>
-                </div>  
-            </div>
+        
+        <main class="mainCarrito">
+            <h1>CARRITO</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Bodega</th>
+                <th>Cepa</th>
+                <th>Precio</th>
+            </tr>
+            <tbody id="tabla-carrito"></tbody>
+        </thead>
+    </table>
         </main>            
         
         <footer class="container-fluid"> 
@@ -183,8 +126,9 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="../js/codepen.js"></script>
-        <script src="../js/script.js"></script>
+        <script src="../js/carrito.js"></script>
 
+    
     
         <script>
             $(window).scroll(function() {
