@@ -552,6 +552,7 @@ html {
                                     text-transform: uppercase;
                                     font-size: .75em;
                                 }
+                                
                                 .comprar {
                                     font: $btn;
                                     letter-spacing: 1px;
@@ -563,11 +564,21 @@ html {
                                     margin: 4px 2px;
                                     cursor: pointer;
                                     transition: 0.3s;
+                                    
+                                    .hide {
+                                        display: none;
+                                    }
                                 }
                                 .comprar:hover {
                                     background-color: transparent;
                                     color: $dorado;
                                     border: 1px solid $dorado;
+                                }
+                                .comprar:focus {
+                                    outline: none;
+                                }
+                                .comprar:disabled {
+                                    opacity: .7;
                                 }
                             }   
                         }

@@ -430,10 +430,16 @@ html {
         margin: 4px 2px;
         cursor: pointer;
         transition: 0.3s; }
+        html body .mainTienda .container #cardsGeneradas div .card .card-body .comprar .hide {
+          display: none; }
       html body .mainTienda .container #cardsGeneradas div .card .card-body .comprar:hover {
         background-color: transparent;
         color: #cd903c;
         border: 1px solid #cd903c; }
+      html body .mainTienda .container #cardsGeneradas div .card .card-body .comprar:focus {
+        outline: none; }
+      html body .mainTienda .container #cardsGeneradas div .card .card-body .comprar:disabled {
+        opacity: .7; }
     html body .blog section div div div img {
       border: 1px solid #cd903c; }
     html body .blog section div div div a h2 {

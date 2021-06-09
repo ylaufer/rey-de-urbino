@@ -96,7 +96,10 @@ function crearCard(producto){
                                     <h3 class="card-title nombre">${producto.nombre}</h3>
                                     <h5 class="card-title cepa">${producto.cepa}</h5>
                                     <p class="card-text texto">Precio: $${producto.precio}</p>
-                                    <button id="${producto.id}" class="comprar w-100">COMPRAR</button>
+                                    <button id="${producto.id}" class="comprar w-100">
+                                      <i class="fa fa-spinner fa-spin hide"></i>
+                                      <span class="btn-text"> COMPRAR</span>
+                                    </button>
                                   </div>
                                 </div>`
   
@@ -105,8 +108,19 @@ function crearCard(producto){
 
   function manejadorCompra(evento){
     let seleccionado = evento.target.id;
-    let datosProducto = new Producto(DATOS.find(objeto  => objeto.id == seleccionado));
+    let datosProducto = new Producto(DATOS.find(objeto => objeto.id == seleccionado));
     CARRITO.push(datosProducto);
+    $(evento.target).animate ({
+                        left: '250px',
+                        opacity: '.7' },
+                        "slow",
+                        function (){
+                            console.log("listo")
+                        })
+                    .attr('disabled','disabled') 
+                    .css('background-color','#cd903c')
+                    .css('color','white')
+                    .children('.btn-text').text("COMPRADO");
     agregarCarrito(CARRITO);
     sincronizarStorage()
   }
@@ -153,6 +167,8 @@ $('#carrito').mouseleave(function(){
 
 /* FALTA HACER:
 
+
+
 HACER:
 
 - ANIMAR CUANDO APRETAS EL BOTON DE COMPRAR
@@ -162,5 +178,8 @@ HACER:
 - FUNCIONALIDAD SUB-TOTAL
 - FUNCIONALIDAD CANTIDADES
 - FILTROS
+- PODER COMPRAR CON TECLADO
 
+JQUERY:
+READY, DOMCONTENTLOADED
 */
