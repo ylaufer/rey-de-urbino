@@ -96,9 +96,7 @@ function crearCard(producto){
                                     <h3 class="card-title nombre">${producto.nombre}</h3>
                                     <h5 class="card-title cepa">${producto.cepa}</h5>
                                     <p class="card-text texto">Precio: $${producto.precio}</p>
-                                    <button id="${producto.id}" class="comprar w-100">
-                                      <span id="${producto.id}" class="btn-text">COMPRAR</span>
-                                    </button>
+                                    <button id="${producto.id}" class="comprar w-100">COMPRAR</button>
                                   </div>
                                 </div>`
   
@@ -119,7 +117,7 @@ function crearCard(producto){
                     .attr('disabled','disabled') 
                     .css('background-color','#cd903c')
                     .css('color','white')
-                    .children('.btn-text').text("COMPRADO");
+                    .text("COMPRADO");
     agregarCarrito(CARRITO);
     sincronizarStorage()
   }
@@ -165,12 +163,7 @@ $('#carrito').mouseleave(function(){
 
 
 /* FALTA HACER:
-
-
-
-HACER:
-
-- ANIMAR CUANDO APRETAS EL BOTON DE COMPRAR
+- AJAX
 - FUNCIONALIDAD TRASH CAN
 - LOCAL STORAGE EN INDEX Y EN TIENDA Y EN TODAS (Una vez guardados los items en el carrito estaría bueno que luego los levantes con un localStorage.getitem al principio del código (preguntar, si es distinto de null ) así como hiciste en carrito.html pero también hacerlo en el index.html. Si es null, se pasa de largo)
 - STYLEAR PAGINA CARRITO
