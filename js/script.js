@@ -97,8 +97,7 @@ function crearCard(producto){
                                     <h5 class="card-title cepa">${producto.cepa}</h5>
                                     <p class="card-text texto">Precio: $${producto.precio}</p>
                                     <button id="${producto.id}" class="comprar w-100">
-                                      <i class="fa fa-spinner fa-spin hide"></i>
-                                      <span class="btn-text"> COMPRAR</span>
+                                      <span id="${producto.id}" class="btn-text">COMPRAR</span>
                                     </button>
                                   </div>
                                 </div>`
