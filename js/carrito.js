@@ -1,11 +1,19 @@
-const almacenados = JSON.parse(localStorage.getItem("carrito"));
+/****************** PAGINA CARRITO *****************/
+let contenedor = "";
+
+
+let almacenados = JSON.parse(localStorage.getItem("carrito"));
+console.log(almacenados);
+
+if ($.isEmptyObject(almacenados) === true) {
+    console.log("vacio");
+}
 let contenedorCarrito = document.getElementById('tabla-carrito');
 
 
-
-
+// CARGA DATOS CARRITO EN PAGINA CARRITO
 for (const producto of almacenados) {
-    let contenedor = document.createElement("tr");
+    contenedor = document.createElement("tr");
     contenedor.innerHTML = `
     <td>${producto.nombre}</td>
     <td>${producto.bodega}</td>
