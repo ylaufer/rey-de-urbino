@@ -58,9 +58,9 @@ $(()=>{
     }
 
     function agregarProducto(e){
-      $(e.target).text("Añadiendo...")
-                 .delay(5000)
-                 .text ("COMPRADO");
+      // $(e.target).text("Añadiendo...")
+      //            .delay(5000)
+      //            .text ("COMPRADO");
       let producto = SELECCIONADOS.find(producto => producto.id == e.target.id);
       if (producto != undefined) {
       producto.addCantidad();
