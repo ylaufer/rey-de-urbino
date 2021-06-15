@@ -102,27 +102,7 @@ $(()=>{
           localStorage = null; 
       }
 
-    }
-
-    //   function manejadorCompra(evento){
-    //     let seleccionado = evento.target.id;
-    //     let datosProducto = new Producto(vinos.find(objeto => objeto.id == seleccionado));
-    //     CARRITO.push(datosProducto);
-    //     $(evento.target).animate ({
-    //                         left: '250px',
-    //                         opacity: '.7' },
-    //                         "slow",
-    //                         function (){
-    //                             console.log("listo")
-    //                         })
-    //                     .attr('disabled','disabled') 
-    //                     .css('background-color','#cd903c')
-    //                     .css('color','white')
-    //                     .text("COMPRADO");
-    //     agregarCarrito(CARRITO);
-    //     sincronizarStorage()
-    //   }
-    
+    }    
         function eliminarDelete(id){
           const objeto = SELECCIONADOS.find(x => x.id == id);
           if(objeto.cantidad == 1){
