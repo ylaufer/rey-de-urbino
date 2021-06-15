@@ -24,7 +24,7 @@ $(()=>{
     const comprarBtn = document.getElementsByClassName('comprar');
     let contenedorAlerts = document.getElementById('contenedorAlerts');
     let contenedorCarrito = document.getElementById('lista-carrito');
-    const CARRITO = [];
+    const SELECCIONADOS = [];
 
     for(let producto of productos){
         crearCard(producto);
@@ -32,7 +32,7 @@ $(()=>{
 
     // EVENT LISTENERS
     for (const boton of comprarBtn) {
-      boton.onclick =  manejadorCompra;
+      boton.onclick =  agregarProducto;
     }
 
     // FUNCIONES
@@ -55,64 +55,87 @@ $(()=>{
                                     </div>`
       
         contenedorPadre.appendChild(nuevoElemento);
-      }
-
-      function manejadorCompra(evento){
-        let seleccionado = evento.target.id;
-        let datosProducto = new Producto(vinos.find(objeto => objeto.id == seleccionado));
-        CARRITO.push(datosProducto);
-        $(evento.target).animate ({
-                            left: '250px',
-                            opacity: '.7' },
-                            "slow",
-                            function (){
-                                console.log("listo")
-                            })
-                        .attr('disabled','disabled') 
-                        .css('background-color','#cd903c')
-                        .css('color','white')
-                        .text("COMPRADO");
-        agregarCarrito(CARRITO);
-        sincronizarStorage()
-      }
-      
-      function agregarCarrito(CARRITO){
-      removeCarritoPrevio()
-        for (const producto of CARRITO) {
-            const row = document.createElement('tr');
-            row.innerHTML = 
-                `<td>  
-                    <img src="${producto.imagen}" width=50>
-                  </td>
-                  <td>${producto.nombre}</td>
-                  <td>${producto.precio}</td>
-                  <td>1</td>
-                  <td>
-                  <a href="#" class="btnDelete"><i class="fa fa-trash fa-2x btnDelete"></i></a>
-                  </td>`;
-            contenedorCarrito.appendChild(row);
-        }  
-
-        $(".btnDelete").click(function (evento) { 
-          console.log("apreto boton delete");
-            eliminarFilter(evento.target.id);
-        })
-    
-        function eliminarFilter(id){
-            CARRITO = CARRITO.filter(objeto => objeto.id != id);
-            // contenedorCarrito.innerHTML = '';
-        }
-      }
-
-    function removeCarritoPrevio(){
-      contenedorCarrito.innerHTML = '';
-      localStorage = null;
     }
 
+    function agregarProducto(e){
+      $(e.target).text("Añadiendo...")
+                 .delay(5000)
+                 .text ("COMPRADO");
+      let producto = SELECCIONADOS.find(producto => producto.id == e.target.id);
+      if (producto != undefined) {
+      producto.addCantidad();
+      } else {
+      let seleccionado = vinos.find(producto => producto.id == e.target.id);
+      SELECCIONADOS.push(new Producto(seleccionado));
+      }
+      generarCarrito();
+    }   
 
+    function generarCarrito(){
+      //RENDER CARRITO (SALIDA DEL CARRITO SEGUN LA INFORMACION DEL ARRAY DE SELECCIONADOS)
+      removeCarritoPrevio();
+      for (const producto of SELECCIONADOS) {
+        const row = document.createElement('tr');
+                row.innerHTML = 
+                    `<td>  
+                        <img src="${producto.imagen}" width=50>
+                      </td>
+                      <td>${producto.nombre}</td>
+                      <td>${producto.getTotal()}</td>
+                      <td>${producto.cantidad}</td>
+                      <td>
+                      <a href="#"><i id="${producto.id}" class="fa fa-trash fa-2x btnDelete"></i></a>
+                      </td>`;
+                contenedorCarrito.appendChild(row);
+
+                $(".btnDelete").click(function (e) { 
+                  console.log("aprete delete")
+                  eliminarDelete(e.target.id);
+                  generarCarrito();
+                })
+      sincronizarStorage();
+    }
+      
+
+      function removeCarritoPrevio(){
+          contenedorCarrito.innerHTML = '';
+          localStorage = null; 
+      }
+
+    }
+
+    //   function manejadorCompra(evento){
+    //     let seleccionado = evento.target.id;
+    //     let datosProducto = new Producto(vinos.find(objeto => objeto.id == seleccionado));
+    //     CARRITO.push(datosProducto);
+    //     $(evento.target).animate ({
+    //                         left: '250px',
+    //                         opacity: '.7' },
+    //                         "slow",
+    //                         function (){
+    //                             console.log("listo")
+    //                         })
+    //                     .attr('disabled','disabled') 
+    //                     .css('background-color','#cd903c')
+    //                     .css('color','white')
+    //                     .text("COMPRADO");
+    //     agregarCarrito(CARRITO);
+    //     sincronizarStorage()
+    //   }
+    
+        function eliminarDelete(id){
+          const objeto = SELECCIONADOS.find(x => x.id == id);
+          if(objeto.cantidad == 1){
+            const idObj  = SELECCIONADOS.indexOf(objeto);
+            SELECCIONADOS.splice(idObj, 1);
+          } else {
+            objeto.resCantidad() ;
+          }
+        }
+   
+   
     function sincronizarStorage() {
-      localStorage.setItem('carrito', JSON.stringify(CARRITO));
-      console.log(CARRITO);
+      localStorage.setItem('carrito', JSON.stringify(SELECCIONADOS));
     }
   })
 })  

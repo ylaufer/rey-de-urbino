@@ -18,7 +18,8 @@ for (const producto of almacenados) {
     <td>${producto.nombre}</td>
     <td>${producto.bodega}</td>
     <td>${producto.cepa}</td>
-    <td>${producto.precio}</td>
+    <td></td>
+    <td></td>
     `
     contenedorCarrito.appendChild(contenedor);
 }
