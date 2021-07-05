@@ -115,7 +115,7 @@ html {
                                         white-space: normal;
                                         word-wrap: break-word;
                                         color:$blanco;
-                                        text-decoration: none;              
+                                        text-decoration: none;           
                                     }
                                     .irACarrito:hover {
                                         background-color: transparent;
@@ -394,6 +394,37 @@ html {
             }
         }
         
+        // HOME CARRITO
+        .homeCarrito {
+            width: 100%;
+            height: 100vh;
+            background-image: url(../assets/img/fotos/cashier.jpg);
+            background-position: center top;
+            background-size:cover;
+            .innerContainer{
+                background-color: transparent;
+                height: 80%;
+                width: 50%;
+                position: relative;
+                top: 10%;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                .homeCarrito__h1 {
+                    font: $h1;
+                    color: $blanco;
+                    margin: 0 auto;
+                    align-self: flex-end;
+                    text-align: center;
+                }
+            }
+        }
+
+
+
+
 // MAIN DEL INDEX 
         .mainIndex {
             margin-top: 100px;
@@ -865,7 +896,24 @@ html {
                     }    
                 }    
             }
-        }        
+        }   
+        
+        .mainCarrito {
+            .finalizar {
+                    font: $navbar;
+                    letter-spacing: 1px;
+                    background-color: $dorado;
+                    border: 1px solid $dorado;
+                    color:$blanco;
+                    text-decoration: none;               
+                    cursor: pointer;
+                    transition: 0.3s;                   
+                }
+                .finalizar:hover {
+                    background-color: $negro;
+                    color: $dorado; 
+            }
+        }
 
 // FOOTER - SUBSCRIBE
         footer {

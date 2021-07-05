@@ -22,9 +22,30 @@ $(()=>{
 
     let contenedorPadre = document.getElementById('cardsGeneradas');
     const comprarBtn = document.getElementsByClassName('comprar');
-    let contenedorAlerts = document.getElementById('contenedorAlerts');
     let contenedorCarrito = document.getElementById('lista-carrito');
+    let btnCarrito = document.getElementsByClassName('irACarrito');
     const SELECCIONADOS = [];
+
+    $(document).ready(function() {
+
+      checkStorage();
+    
+    })
+      
+    function checkStorage() {
+      if ($.isEmptyObject(carrito) === true) {
+        console.log("localstorage vacio");
+      } else {
+        let almacenados = JSON.parse(localStorage.getItem("carrito"));
+        console.log ("localstorage lleno")
+        for (const almacen of almacenados) {
+        SELECCIONADOS.push(new Producto(almacen));
+        
+        }
+        console.log("los que estan en localstorage son", SELECCIONADOS)
+        generarCarrito();
+      }
+    }
 
     for(let producto of productos){
         crearCard(producto);
@@ -34,6 +55,9 @@ $(()=>{
     for (const boton of comprarBtn) {
       boton.onclick =  agregarProducto;
     }
+    $(btnCarrito).click(function(){
+      sincronizarStorage();
+    })
 
     // FUNCIONES
 
@@ -60,7 +84,7 @@ $(()=>{
     function agregarProducto(e){
       $(e.target).text("Añadiendo...")
                  .delay(5000)
-                 .text ("COMPRADO");
+                 .text ("COMPRAR OTRO");
       let producto = SELECCIONADOS.find(producto => producto.id == e.target.id);
       if (producto != undefined) {
       producto.addCantidad();
@@ -85,7 +109,8 @@ $(()=>{
                       <td>${producto.cantidad}</td>
                       <td>
                       <a href="#"><i id="${producto.id}" class="fa fa-trash fa-2x btnDelete"></i></a>
-                      </td>`;
+                      </td>
+                      `;
                 contenedorCarrito.appendChild(row);
 
                 $(".btnDelete").click(function (e) { 
@@ -104,32 +129,16 @@ $(()=>{
 
     }
 
-    //   function manejadorCompra(evento){
-    //     let seleccionado = evento.target.id;
-    //     let datosProducto = new Producto(vinos.find(objeto => objeto.id == seleccionado));
-    //     CARRITO.push(datosProducto);
-    //     $(evento.target).animate ({
-    //                         left: '250px',
-    //                         opacity: '.7' },
-    //                         "slow",
-    //                         function (){
-    //                             console.log("listo")
-    //                         })
-    //                     .attr('disabled','disabled') 
-    //                     .css('background-color','#cd903c')
-    //                     .css('color','white')
-    //                     .text("COMPRADO");
-    //     agregarCarrito(CARRITO);
-    //     sincronizarStorage()
-    //   }
     
         function eliminarDelete(id){
           const objeto = SELECCIONADOS.find(x => x.id == id);
           if(objeto.cantidad == 1){
             const idObj  = SELECCIONADOS.indexOf(objeto);
             SELECCIONADOS.splice(idObj, 1);
+            console.log(SELECCIONADOS);
           } else {
-            objeto.resCantidad() ;
+            objeto.resCantidad();
+            console.log(SELECCIONADOS);
           }
         }
    
@@ -155,20 +164,3 @@ $('#carrito').mouseleave(function(){
   $(this).hide();
 });
 
-
-/* FALTA HACER:
-- FUNCIONALIDAD TRASH CAN
-- LOCAL STORAGE EN INDEX Y EN TIENDA Y EN TODAS (Una vez guardados los items en el carrito estaría bueno que luego los levantes con un localStorage.getitem al principio del código (preguntar, si es distinto de null ) así como hiciste en carrito.html pero también hacerlo en el index.html. Si es null, se pasa de largo) (SOBREESCRIBIR)
-- STYLEAR PAGINA CARRITO
-- FUNCIONALIDAD SUB-TOTAL
-- FUNCIONALIDAD CANTIDADES
-- FILTROS
-- PODER COMPRAR CON TECLADO
-- request params por id
-- POST PARA FINALIZAR COMPRA
-- buscador / ordenar ?
-- animacion comprado (añadiendo...)
-
-JQUERY:
-READY, DOMCONTENTLOADED
-*/

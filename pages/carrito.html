@@ -21,7 +21,6 @@
     </head>
     <body>   
         <nav class="nav">
-            <!-- Sacado de: https://codepen.io/albizan/pen/mMWdWZ -->
             <div class="container">
                 <div class="logo">
                     <a href="../index.html">RdU</a>
@@ -35,9 +34,9 @@
                         <li><a href="../pages/tienda.html">Tienda</a></li>
                         <li><a href="../pages/blog.html">Blog</a></li>
                         <li><a href="../pages/contacto.html">Contacto</a></li>
-                        <li><a href="#">
+                        <!-- <li><a href="#">
                             <i class="fa fa-shopping-cart fa-2x"></i>
-                        </a></li>
+                        </a></li> -->
                     </ul>
                 </div>
                 <span class="navTrigger">
@@ -48,24 +47,55 @@
             </div>
         </nav>
         <section class="homeCarrito">
-            
+            <div class="innerContainer">
+                <h1 class="homeCarrito__h1">Carrito</h1>
+            </div>
         </section>
         
         <main class="mainCarrito">
-            <h1>CARRITO</h1>
-    <table class="compra">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Bodega</th>
-                <th>Cepa</th>
-                <th>Cantidad</th>
-                <th>Subtotal</th>
-            </tr>
-            <tbody id="tabla-carrito"></tbody>
-        </thead>
-    </table>
-        </main>            
+            <div class="container-fluid">
+                <div class="row m-4">
+                  <div class="col-9" align-self-start">
+                    <table class="table compra">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Bodega</th>
+                                <th>Cepa</th>
+                                <th>Cantidad</th>
+                                <th>Subtotal</th>
+                            </tr>
+                            <tbody id="tabla-carrito"></tbody>
+                        </thead>
+                    </table>
+                  </div>
+                  <div class="col align-self-center">
+                    <aside>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title">Resumen</h5>
+                              <table class="table">
+                                <tbody id="resumen">
+                                <tr>
+                                    <th scope="row">Envío</th>
+                                    <td>$250</td>
+                                  </tr>
+                                </tbody>
+                                <tfoot id="tfoot">
+
+                                </tfoot>
+                              </table>
+                              <a href="#" class="finalizar btn btn-primary">Finalizar Compra</a>
+                            </div>
+                          </div>
+                    </aside>   
+                  </div>
+                </div>
+            </div>   
+        </main>   
+            
+                
+            
         
         <footer class="container-fluid"> 
             <section class="row px-lg-5">

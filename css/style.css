@@ -301,6 +301,29 @@ html {
       background-color: white; }
     html body .homeTienda .carousel .carousel-indicators .active {
       background-color: #cd903c; }
+    html body .homeCarrito {
+      width: 100%;
+      height: 100vh;
+      background-image: url(../assets/img/fotos/cashier.jpg);
+      background-position: center top;
+      background-size: cover; }
+      html body .homeCarrito .innerContainer {
+        background-color: transparent;
+        height: 80%;
+        width: 50%;
+        position: relative;
+        top: 10%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center; }
+        html body .homeCarrito .innerContainer .homeCarrito__h1 {
+          font: 400 2.5em "Playfair Display", serif;
+          color: white;
+          margin: 0 auto;
+          align-self: flex-end;
+          text-align: center; }
     html body .mainIndex {
       margin-top: 100px; }
       html body .mainIndex div.container div h2 {
@@ -614,6 +637,18 @@ html {
           color: #cd903c; }
       html body .mainServicios div div div .fotoServicios {
         min-height: 350px; }
+    html body .mainCarrito .finalizar {
+      font: 15px "Lato", sans-serif;
+      letter-spacing: 1px;
+      background-color: #cd903c;
+      border: 1px solid #cd903c;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.3s; }
+    html body .mainCarrito .finalizar:hover {
+      background-color: #000000;
+      color: #cd903c; }
     html body footer {
       background-color: #000000;
       border-bottom-left-radius: 25px;
